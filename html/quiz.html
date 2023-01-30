@@ -5,6 +5,8 @@
     <script src="/Users/choejimin/Desktop/Focus_On_Video/js/popup.js"></script>
     <script src="/Users/choejimin/Desktop/Focus_On_Video/js/quiz.js"></script>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+
     <style>
       .video-container {
           position: relative;
@@ -101,10 +103,9 @@
     <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
     
       <div id="body-wrapper">
+        
         <div id="player"></div>
-        <!-- <div class="video-container">
-          <iframe width="560"height="315"src="https://www.youtube.com/embed/UtXzwcts1D0?modestbranding=0showinfo=0" end=5 frameborder="0"></iframe>  
-        </div> -->
+
        <div class="text-contains">
         PlayList
        </div>
@@ -179,7 +180,7 @@
          player = new YT.Player('player', {
            height: '450',
            width: '845',
-           videoId: 'M7lc1UVf-VE',
+           videoId: 'zCdB-PNcOBM',
            events: {
              'onReady': onPlayerReady,
              'onStateChange': onPlayerStateChange
@@ -190,50 +191,58 @@
        // 4. The API will call this function when the video player is ready.
        function onPlayerReady(event) {
          event.target.playVideo();
-        //  var videotime = 0;
-        //  event.target.playVideo();
-        //  function updateTime() {
-        //    console.log(player.getCurrentTime());
-        //  }
+         var videotime = 0;
+         event.target.playVideo();
+         function updateTime() {
+          //  console.log(player.getCurrentTime());
+         }
         //  timeupdater = setInterval(updateTime, 0);
+      //     playerVars: {
+      //       autoplay: true, // 자동 재생 유무
+      // // loop: true,     // 반복 재생 유무
+      //       playlist: 'EJF919p_hb0',
+      //       start:13,
+      //       end: 35,
+      //     };
        }
  
        // 5. The API calls this function when the player's state changes.
        //    The function indicates that when playing a video (state=1),
        //    the player should play for six seconds and then stop.
        var done = false;
+
+       const timestamp = [4,21,31];
+
        function onPlayerStateChange(event) {
          if (event.data == YT.PlayerState.PLAYING && !done) {
           
           var timer = setInterval(function(){
             
             var sec=player.getCurrentTime();
-            for(var i=0; i<timestamp.length; i++){
-              if(timestamp[i][0]+timestamp[i][1]>= sec){
+            
+            for(var i=0; i<3; i++)
+              if(timestamp[i] <= sec){
                 // console.log("시작");
-                player.stopVideo();
-                
-               
-                
+                player.pauseVideo();
+                clearInterval(timer);
+                window.open('popup.html');
               }
-            } 
+            
           }, 1000);
            done = true;
          }
         
        }
-       function stopVideo() {
-         player.stopVideo();
-         clearInterval(timer);
-         window.open('popup.html');
-         playVideo();
+      //  function stopVideo() {
+      //     player.s
 
-         }
-       }
-       function playVideo(){
-          player.playVideo();
+      //    }
+       
+      //  function playVideo(){
+      //     player.playVideo();
+      //  }
 
-       }
+
      </script>
 
 

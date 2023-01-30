@@ -10,6 +10,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>popup</title>
     <link rel="stylesheet" href="/Users/choejimin/Desktop/Focus_On_Video/css/popup.css" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <div class="container">
@@ -24,15 +27,23 @@
                             <h1>Quiz</h1>
                         </div>
                         <div class="body-contentbox">
-                            <p> 2 + 2 * 2 = ? </p>
+                            <script type ="text/javascript">
+                                
+                                for(var i=0; i<3; i++)
+                                {   // console.log("시작");
+                                   sentence[i][0];
+                                   
+                                }
+                                // timer = setInterval(callback,1000)
+                            </script>
                         </div>
                     </div>
                 </div>
                 <div class="popup-foot">
-                    <span class="pop-btn" id="btn1" onClick="reply_click(this.id)" value="6">6</span>
-                    <span class="pop-btn" id="btn2" onClick="reply_click(this.id)" value="Get Value">8</span>
-                    <span class="pop-btn" id="btn3" onClick="reply_click(this.id)" value="Get Value">10</span>
-                    <span class="pop-btn" id="btn4" onClick="reply_click(this.id)" value="Get Value">28</span>
+                    <span class="pop-btn" id="btn1" onClick="reply_click(this.id)">sentence[count][1]</span>
+                    <span class="pop-btn" id="btn2" onClick="reply_click(this.id)">8</span>
+                    <span class="pop-btn" id="btn3" onClick="reply_click(this.id)">10</span>
+                    <span class="pop-btn" id="btn4" onClick="reply_click(this.id)">28</span>
                 </div>
             </div>
         </div>
