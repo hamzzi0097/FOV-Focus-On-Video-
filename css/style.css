@@ -1,40 +1,47 @@
-iframe{ 
+.search-box {
     position: absolute;
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    height: 100%;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #dadada;
+    height: 40px;
+    padding: 10px;
+    border-radius: 40px;
 }
 
-.video-box {
-    position: relative;
-    padding-top:56%;
-    width: 100%;
-    height: 0;
-}
-
-.container {
+  .search-btn {
+    color: #EDEDED;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #949BA0;
     display: flex;
-    justify-content: center;
     align-items: center;
-
-    margin-left: 15%;
-    margin-right: 15%;
-}
-#area {
-    position: relative; /* absolute는 부모가 relative일 때 부모를 따라간다. */
-    width: 100%;
-    padding-bottom: 56.25%; /* 16:9 비율 */
-  }
-  
-#video {
-position: absolute;
-width: 100%; /* 부모에 맞게 꽉 채운다. */
-height: 100%;
+    justify-content: center;
 }
 
-#player{
-    position: absolute;
-    height: 0;
-    padding-bottom: 75%;
+.search-txt {
+    float: left;
+    padding: 0;
+    background: none;
+    border: none;
+    outline: none;
+    color: black;
+    font-size: 20px;
+    line-height: 40px;
+    width: 0;
+    transition: 0.5s;
+}
+
+.search-box:hover > form .search-txt {
+    width: 700px;
+}
+
+.line{
+    width: 1705px;
+    margin-left : auto;
+    margin-right : auto;
+    color: blue;
+    border : 0;
 }
