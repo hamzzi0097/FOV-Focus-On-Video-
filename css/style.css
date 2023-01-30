@@ -1,7 +1,18 @@
 .my_gradient{
     background: linear-gradient(to bottom right, mediumpurple 25%, rgb(252, 179, 252));
 }
-
+iframe{
+    position: relative;
+    width: 1400px;
+    height: 540px;
+    display:block;
+}
+video{
+    position: relative;
+    width: 1400px;
+    height: 540px;
+    display: block;
+}
 .search-box {
     position: absolute;
     top: 24%;

@@ -2,15 +2,16 @@
 <html>
   <head>
     <link rel="stylesheet" href="/Users/choejimin/Desktop/Focus_On_Video/css/style.css" />
+    <script src="/Users/choejimin/Desktop/Focus_On_Video/js/popup.js"></script>
+    <script src="/Users/choejimin/Desktop/Focus_On_Video/js/quiz.js"></script>
+
     <style>
       .video-container {
           position: relative;
           height: 540px;
           display:block;
           
-          /* padding-bottom: 60%; */
-        
-          
+          /* padding-bottom: 60%; */  
       }
       html, body{
         width: 100%;
@@ -101,9 +102,9 @@
     
       <div id="body-wrapper">
         <div id="player"></div>
-        <div class="video-container">
-          <iframe width="560"height="315"src="https://www.youtube.com/embed/UtXzwcts1D0?modestbranding=0showinfo=0" frameborder="0"></iframe>  
-        </div>
+        <!-- <div class="video-container">
+          <iframe width="560"height="315"src="https://www.youtube.com/embed/UtXzwcts1D0?modestbranding=0showinfo=0" end=5 frameborder="0"></iframe>  
+        </div> -->
        <div class="text-contains">
         PlayList
        </div>
@@ -174,21 +175,27 @@
        // 3. This function creates an <iframe> (and YouTube player)
        //    after the API code downloads.
        var player;
-       // function onYouTubeIframeAPIReady() {
-       //   player = new YT.Player('player', {
-       //     height: '904',
-       //     width: '1690',
-       //     videoId: 'M7lc1UVf-VE',
-       //     events: {
-       //       'onReady': onPlayerReady,
-       //       'onStateChange': onPlayerStateChange
-       //     }
-       //   });
-       // }
+       function onYouTubeIframeAPIReady() {
+         player = new YT.Player('player', {
+           height: '450',
+           width: '845',
+           videoId: 'M7lc1UVf-VE',
+           events: {
+             'onReady': onPlayerReady,
+             'onStateChange': onPlayerStateChange
+           }
+         });
+       }
  
        // 4. The API will call this function when the video player is ready.
        function onPlayerReady(event) {
          event.target.playVideo();
+        //  var videotime = 0;
+        //  event.target.playVideo();
+        //  function updateTime() {
+        //    console.log(player.getCurrentTime());
+        //  }
+        //  timeupdater = setInterval(updateTime, 0);
        }
  
        // 5. The API calls this function when the player's state changes.
@@ -197,12 +204,35 @@
        var done = false;
        function onPlayerStateChange(event) {
          if (event.data == YT.PlayerState.PLAYING && !done) {
-           setTimeout(stopVideo, 6000);
+          
+          var timer = setInterval(function(){
+            
+            var sec=player.getCurrentTime();
+            for(var i=0; i<timestamp.length; i++){
+              if(timestamp[i][0]+timestamp[i][1]>= sec){
+                // console.log("시작");
+                player.stopVideo();
+                
+               
+                
+              }
+            } 
+          }, 1000);
            done = true;
          }
+        
        }
        function stopVideo() {
          player.stopVideo();
+         clearInterval(timer);
+         window.open('popup.html');
+         playVideo();
+
+         }
+       }
+       function playVideo(){
+          player.playVideo();
+
        }
      </script>
 
