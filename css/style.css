@@ -1,6 +1,6 @@
 .search-box {
     position: absolute;
-    top: 35%;
+    top: 24%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #dadada;
@@ -9,7 +9,7 @@
     border-radius: 40px;
 }
 
-  .search-btn {
+.search-btn {
     color: #EDEDED;
     float: right;
     width: 40px;
