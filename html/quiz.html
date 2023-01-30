@@ -1,50 +1,211 @@
 <!DOCTYPE html>
 <html>
-  <body>
+  <head>
+    <link rel="stylesheet" href="/Users/choejimin/Desktop/Focus_On_Video/css/style.css" />
+    <style>
+      .video-container {
+          position: relative;
+          height: 540px;
+          display:block;
+          
+          /* padding-bottom: 60%; */
+        
+          
+      }
+      html, body{
+        width: 100%;
+        height: 100%;
+      }
+      .text-contains{
+        position: relative;
+        margin: 0 0 0 3%;
+        display:block;
+        font-size: medium;
+        font-weight: bold;
+        color:rgb(202, 200, 200);
+      }
+
+      .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 93%;
+        margin-top: 5px;
+      }
+
+      .thumbnail{
+        position: relative;
+        width: 50%;
+        height: 0;
+        padding-bottom: 56.25%;
+    }
+    .card-body{
+        background-color: white;
+        width: 180px;
+        height:80px;
+        /* padding-bottom: %; */
+        margin: 0;
+
+    }
+    .carda{
+        margin: 5px;
+        flex: auto;
+    }
+
+    .card-img-top{
+        margin: 0;
+    }
+
+    .card-text{
+        margin:6px 5px 5px 7px;
+    }
+    .card-title{
+        margin: 0 0 5px 5px;
+        background-color: white;
+        padding: 5px 0 0 3px;
+    }
+    .card-img-top{
+        font-size:0;
+        width: 180px;
+        height:100px;
+    }
+    img{
+        vertical-align: bottom;
+    }
+    .a-span{
+        vertical-align: bottom;
+    }
+    .rowa{
+        display: flex;
+        margin: 0 auto;
+        justify-content: space-around;
+    }
+    #body-wrapper {
+    min-height: 100%;
+    position: relative;
+    }
+
+    footer {
+        width: 100%;
+        height: 99999px; /* footer의 높이 */
+        position: absolute;  
+        bottom: 0;
+        left: 0;
+    }
+
+    </style>
+  </head>
+  <body style="background-color:black">
     <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
-    <div id="player"></div>
+    
+      <div id="body-wrapper">
+        <div id="player"></div>
+        <div class="video-container">
+          <iframe width="560"height="315"src="https://www.youtube.com/embed/UtXzwcts1D0?modestbranding=0showinfo=0" frameborder="0"></iframe>  
+        </div>
+       <div class="text-contains">
+        PlayList
+       </div>
+        <div class="rowa">
+          <div class="carda" onclick="location.href='quiz.html'" style="margin-left:40px" >
+              <img src="https://img.youtube.com/vi/GjAD83B4JaY/mqdefault.jpg" class="card-img-top" alt="thumbnail" ><span class ="a-span"></span>
+              <div class="card-body">
+                <h5 class="card-title" style="margin-right: 5px">Part 1.Proper Dress and PPE / Lab Safety Video 
+                </h5>
+                <p class="card-text" style="font-size:small">게시자: BioNetwork <br> 2014. 3. 26.</p>
+              </div>
+          </div>
+      
+          <div class="carda" onclick="location.href='quiz.html'">
+              <img src="https://img.youtube.com/vi/IiHEYtnKfF0/mqdefault.jpg" class="card-img-top" alt="thumbnail" ><span class ="a-span"></span>
+              <div class="card-body">
+                <h5 class="card-title" style="margin-right: 5px">Part 2.Safety Equipment / Lab Safety Video 
+                </h5>
+                <p class="card-text" style="font-size:small">게시자: BioNetwork <br> 2015.12.15</p>
+              </div>
+          </div>     
+          <div class="carda" onclick="location.href='quiz.html'">
+              <img src="https://img.youtube.com/vi/e7VkIuiT1kU/mqdefault.jpg" class="card-img-top" alt="thumbnail" ><span class ="a-span"></span>
+              <div class="card-body">
+                <h5 class="card-title" style="margin-right: 5px">Part 3.Behavior / Lab Safety Video 
+                </h5>
+                <p class="card-text" style="font-size:small">게시자: BioNetwork <br> 2014. 3. 26.</p>
+              </div>
+          </div>
+    
+          <div class="carda" onclick="location.href='quiz.html'">
+              <img src="https://img.youtube.com/vi/UtXzwcts1D0/mqdefault.jpg" class="card-img-top" alt="thumbnail" ><span class ="a-span"></span>
+              <div class="card-body">
+                <h5 class="card-title" style="margin-right: 5px">Part 4.Chemical Hazards / Lab Safety Video 
+                </h5>
+                <p class="card-text" style="font-size:small">게시자: BioNetwork <br> 2014. 3. 26.</p>
+              </div>
+          </div>
+    
+          <div class="carda" onclick="location.href='quiz.html'">
+            <img src="https://img.youtube.com/vi/DJWXc--CM_M/mqdefault.jpg" class="card-img-top" alt="thumbnail" ><span class ="a-span"></span>
+            <div class="card-body">
+              <h5 class="card-title" style="margin-right: 5px">Part 5.Safe Chemical Handling / Lab Safety Video 
+              </h5>
+              <p class="card-text" style="font-size:small">게시자: BioNetwork <br> 2014. 3. 26.</p>
+            </div>
+          </div>
+    
+          <div class="carda" onclick="location.href='quiz.html'">
+            <img src="https://img.youtube.com/vi/DJWXc--CM_M/mqdefault.jpg" class="card-img-top" alt="thumbnail" ><span class ="a-span"></span>
+            <div class="card-body">
+              <h5 class="card-title" style="margin-right: 5px">Other General Hazards / Lab Safety Video Part 6
+              </h5>
+              <p class="card-text" style="font-size:small">게시자: BioNetwork <br> 2015.12.15</p>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+      <script>
+        // 2. This code loads the IFrame Player API code asynchronously.
+       var tag = document.createElement('script');
+ 
+       tag.src = "https://www.youtube.com/iframe_api";
+       var firstScriptTag = document.getElementsByTagName('script')[0];
+       firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+ 
+       // 3. This function creates an <iframe> (and YouTube player)
+       //    after the API code downloads.
+       var player;
+       // function onYouTubeIframeAPIReady() {
+       //   player = new YT.Player('player', {
+       //     height: '904',
+       //     width: '1690',
+       //     videoId: 'M7lc1UVf-VE',
+       //     events: {
+       //       'onReady': onPlayerReady,
+       //       'onStateChange': onPlayerStateChange
+       //     }
+       //   });
+       // }
+ 
+       // 4. The API will call this function when the video player is ready.
+       function onPlayerReady(event) {
+         event.target.playVideo();
+       }
+ 
+       // 5. The API calls this function when the player's state changes.
+       //    The function indicates that when playing a video (state=1),
+       //    the player should play for six seconds and then stop.
+       var done = false;
+       function onPlayerStateChange(event) {
+         if (event.data == YT.PlayerState.PLAYING && !done) {
+           setTimeout(stopVideo, 6000);
+           done = true;
+         }
+       }
+       function stopVideo() {
+         player.stopVideo();
+       }
+     </script>
 
-    <script>
-      // 2. This code loads the IFrame Player API code asynchronously.
-      var tag = document.createElement('script');
 
-      tag.src = "https://www.youtube.com/iframe_api";
-      var firstScriptTag = document.getElementsByTagName('script')[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-      // 3. This function creates an <iframe> (and YouTube player)
-      //    after the API code downloads.
-      var player;
-      function onYouTubeIframeAPIReady() {
-        player = new YT.Player('player', {
-          height: '904',
-          width: '1690',
-          videoId: 'M7lc1UVf-VE',
-          events: {
-            'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange
-          }
-        });
-      }
-
-      // 4. The API will call this function when the video player is ready.
-      function onPlayerReady(event) {
-        event.target.playVideo();
-      }
-
-      // 5. The API calls this function when the player's state changes.
-      //    The function indicates that when playing a video (state=1),
-      //    the player should play for six seconds and then stop.
-      var done = false;
-      function onPlayerStateChange(event) {
-        if (event.data == YT.PlayerState.PLAYING && !done) {
-          setTimeout(stopVideo, 6000);
-          done = true;
-        }
-      }
-      function stopVideo() {
-        player.stopVideo();
-      }
-    </script>
   </body>
 </html>
