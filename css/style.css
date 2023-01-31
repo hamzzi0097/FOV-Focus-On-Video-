@@ -15,7 +15,7 @@ video{
 }
 .search-box {
     position: absolute;
-    top: 24%;
+    top: 26%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #dadada;
@@ -57,6 +57,7 @@ video{
     width: 1680px;
     margin-left : auto;
     margin-right : auto;
+    margin-bottom: 76px;
     color: blue;
     border : 0;
 }
